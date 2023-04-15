@@ -4,10 +4,9 @@
 
 ![fitness](https://user-images.githubusercontent.com/107030945/232207053-51dccf68-fd96-4f6e-a92c-4070d57fb082.png) 
 
-- [Demo Project](https://sama-babaee-web.github.io/Gallery-project/)
+- [Demo Project](https://sama-babaee-web.github.io/Fitness-club/)
 
 - Developed by Sama Babaee 👻
-
 
 - Technologies Used - Html , css , scss , JavaScript , Bootstrap 
 
