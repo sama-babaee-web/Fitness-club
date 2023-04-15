@@ -1,6 +1,5 @@
 # Fitness-club
 
-**See a special and attractive photo gallery**
 
 ![fitness](https://user-images.githubusercontent.com/107030945/232207053-51dccf68-fd96-4f6e-a92c-4070d57fb082.png) 
 
