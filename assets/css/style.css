@@ -27,6 +27,13 @@
   --font-weight-bold: 700;
 }
 
+// Css Reset
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background-color: var(--white-color);
   font-family: var(--body-font-family);
