@@ -1,15 +1,15 @@
 :root {
   --white-color: #ffffff;
-  --primary-color: #F8CB2E;
-  --secondary-color: #EE5007;
+  --primary-color: #f8cb2e;
+  --secondary-color: #ee5007;
   --section-bg-color: #f0f8ff;
-  --custom-btn-bg-color: #EE5007;
+  --custom-btn-bg-color: #ee5007;
   --custom-btn-bg-hover-color: #c01f27;
   --dark-color: #000000;
   --p-color: #717275;
   --border-color: #7fffd4;
-  --link-hover-color: #B22727;
-  --body-font-family: 'Outfit', sans-serif;
+  --link-hover-color: #b22727;
+  --body-font-family: "Outfit", sans-serif;
   --h1-font-size: 74px;
   --h2-font-size: 46px;
   --h3-font-size: 32px;
@@ -25,6 +25,12 @@
   --font-weight-light: 300;
   --font-weight-normal: 400;
   --font-weight-bold: 700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -127,12 +133,12 @@ strong {
 
 .link-fx-1:hover::before {
   transform: translateX(17px) scaleX(0);
-  transition: transform .2s;
+  transition: transform 0.2s;
 }
 
 .link-fx-1:hover .icon circle {
   stroke-dashoffset: 200;
-  transition: stroke-dashoffset .2s .1s;
+  transition: stroke-dashoffset 0.2s 0.1s;
 }
 
 .link-fx-1:hover .icon line {
@@ -152,7 +158,7 @@ strong {
   height: 1px;
   background-color: currentColor;
   transform-origin: right center;
-  transition: transform .2s .1s;
+  transition: transform 0.2s 0.1s;
 }
 
 .link-fx-1 .icon {
@@ -178,18 +184,17 @@ strong {
 .link-fx-1 .icon circle {
   stroke-dasharray: 100;
   stroke-dashoffset: 100;
-  transition: stroke-dashoffset .2s;
+  transition: stroke-dashoffset 0.2s;
 }
 
 .link-fx-1 .icon line {
-  transition: transform .4s;
+  transition: transform 0.4s;
   transform-origin: 13px 15px;
 }
 
 .link-fx-1 .icon line:last-child {
   transform-origin: 19px 15px;
 }
-
 
 /*---------------------------------------
   SECTION               
@@ -214,7 +219,7 @@ strong {
   opacity: 0.35;
 }
 
-.section-overlay+.container {
+.section-overlay + .container {
   position: relative;
 }
 
@@ -247,7 +252,7 @@ strong {
 .nav-tabs .nav-link:focus,
 .nav-tabs .nav-link:hover {
   background: var(--white-color);
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
   color: var(--primary-color);
 }
 
@@ -262,14 +267,12 @@ strong {
   color: var(--primary-color);
 }
 
-
 /*---------------------------------------
   CUSTOM ICON COLOR               
 -----------------------------------------*/
 .custom-icon {
   color: var(--secondary-color);
 }
-
 
 /*---------------------------------------
   CUSTOM BUTTON               
@@ -309,7 +312,6 @@ strong {
   color: var(--white-color);
 }
 
-
 /*---------------------------------------
   Backgroung Image      
 -----------------------------------------*/
@@ -322,7 +324,8 @@ strong {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  object-fit: cover;
 }
 
 .imgBG-sm {
@@ -330,10 +333,10 @@ strong {
 }
 
 @media screen and (max-width: 550px) {
-  .imgBG{
+  .imgBG {
     display: none;
   }
-  .imgBG-sm{
+  .imgBG-sm {
     display: block;
     position: absolute;
     top: 0;
@@ -347,12 +350,8 @@ strong {
   SITE HEADER              
 -----------------------------------------*/
 .site-header {
-
-  background-color: #FFA559;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  background-color: #ffa559;
 }
-
 
 /*---------------------------------------
   NAVIGATION              
@@ -425,7 +424,8 @@ strong {
 .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon:after {
   transition: top 300ms 50ms ease, -webkit-transform 300ms 350ms ease;
   transition: top 300ms 50ms ease, transform 300ms 350ms ease;
-  transition: top 300ms 50ms ease, transform 300ms 350ms ease, -webkit-transform 300ms 350ms ease;
+  transition: top 300ms 50ms ease, transform 300ms 350ms ease,
+    -webkit-transform 300ms 350ms ease;
   top: 0;
 }
 
@@ -450,14 +450,15 @@ strong {
 .navbar-toggler .navbar-toggler-icon:after {
   transition: top 300ms 350ms ease, -webkit-transform 300ms 50ms ease;
   transition: top 300ms 350ms ease, transform 300ms 50ms ease;
-  transition: top 300ms 350ms ease, transform 300ms 50ms ease, -webkit-transform 300ms 50ms ease;
+  transition: top 300ms 350ms ease, transform 300ms 50ms ease,
+    -webkit-transform 300ms 50ms ease;
   position: absolute;
   right: 0;
   left: 0;
   background: var(--white-color);
   width: 30px;
   height: 2px;
-  content: '';
+  content: "";
 }
 
 .navbar-toggler .navbar-toggler-icon::before {
@@ -467,7 +468,6 @@ strong {
 .navbar-toggler .navbar-toggler-icon::after {
   top: 8px;
 }
-
 
 /*---------------------------------------
   HERO        
@@ -484,7 +484,6 @@ strong {
     font-size: 25px;
   }
 }
-
 
 .hero-section small {
   color: var(--white-color);
@@ -507,12 +506,11 @@ strong {
   height: 100%;
 }
 
-
 /*---------------------------------------
   ABOUT              
 -----------------------------------------*/
 .about-section {
-  background-image: url('../img/edward-unsplash-blur.jpg');
+  background-image: url("../img/edward-unsplash-blur.jpg");
   background-color: #704010;
   background-repeat: no-repeat;
   background-size: cover;
@@ -528,7 +526,6 @@ strong {
   position: relative;
 }
 
-
 /*---------------------------------------
   athletes              
 -----------------------------------------*/
@@ -537,7 +534,6 @@ strong {
   overflow: hidden;
   margin-bottom: 30px;
   border-radius: var(--border-radius-medium);
-
 }
 
 .athletes-image {
@@ -551,14 +547,12 @@ strong {
   transform: scale(1.2);
 }
 
-
 /*---------------------------------------
   CONTACT               
 -----------------------------------------*/
 .google-map {
   border-radius: var(--border-radius-medium);
 }
-
 
 /*---------------------------------------
   CUSTOM FORM               
@@ -588,7 +582,6 @@ strong {
   border-color: transparent;
 }
 
-
 /*---------------------------------------
   SITE FOOTER              
 -----------------------------------------*/
@@ -601,7 +594,7 @@ strong {
 
 .site-footer-top {
   background-color: var(--secondary-color);
-  background-image: url('../img/nainoa-shizuru-NcdG9mK3PBY-unsplash.jpg');
+  background-image: url("../img/nainoa-shizuru-NcdG9mK3PBY-unsplash.jpg");
   background-repeat: no-repeat;
   margin-bottom: 70px;
   padding-top: 30px;
@@ -635,7 +628,6 @@ strong {
 .copyright-text {
   font-size: var(--copyright-font-size);
 }
-
 
 /*---------------------------------------
   SOCIAL ICON               
@@ -680,14 +672,13 @@ strong {
 
 @keyframes spinAround {
   from {
-    transform: rotate(0deg)
+    transform: rotate(0deg);
   }
 
   to {
     transform: rotate(360deg);
   }
 }
-
 
 /*---------------------------------------
   RESPONSIVE STYLES               
@@ -737,9 +728,6 @@ strong {
   .hero-section {
     padding-top: 150px;
   }
-
-
-
 }
 
 @media screen and (max-width: 767px) {
@@ -795,15 +783,15 @@ strong {
   background: url("../img/fitness-gym-girl-nb.jpg") fixed 50% 50% no-repeat;
   background-size: cover;
 }
-.cta-MD{
+.cta-MD {
   display: none;
 }
 
 @media screen and (max-width: 550px) {
-  .cta{
+  .cta {
     display: none;
   }
-  .cta-MD{
+  .cta-MD {
     display: block;
     margin: 50px 0;
     min-height: 500px;
@@ -812,8 +800,6 @@ strong {
     background-size: cover;
   }
 }
-
-
 
 .section {
   padding: 100px 0;
